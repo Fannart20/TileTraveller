@@ -10,6 +10,9 @@ def east():
 def south():
     position -= 0.1
 
+def invalid():
+    print("Not a valid direction!")
+
 def checkPos():
     if position == 1.1 or position == 2.1:
         north = True
@@ -42,20 +45,24 @@ print("You can travel:(N)orth.")
 choice = input("Direction:").capitalize
 while victory != True:
     checkPos()
+    if position == 3.1:
+        print("Victory!")
+        victory = True
     if choice == "N" & north == True:
         north()
     elif choice == "N" & north == False:
-        print("Not a valid direction!")
+        invalid()
     elif choice == "E" & east == True:
         east()
     elif choice == "E" & east == False:
-        print("Not a valid direction!")
-
-
-
-
-
-
-
-else: 
-    print("Victory")
+        invalid()
+    elif choice == "W":
+        if west == True:
+            west()
+        else:
+            invalid()
+    elif choice == "S":
+        if south == True:
+            south()
+        else:
+            invalid()
