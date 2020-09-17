@@ -11,14 +11,21 @@ def south ():
     position -= 0.1
 
 def checkPos():
-    if position == 1.1
+    if position == 1.1 or position == 2.1:
         north = True
         east, south, west = False
     elif position == 1.2:
-        north = True
-        east = True
-        south = True
+        north, east, south = True
         west = False
+    elif position == 1.3:
+        east, south = True
+        north, west = False
+    elif position == 2.2 or position == 3.3:
+        south, west = True
+        north, east = False
+    
+
+
 
 
 
