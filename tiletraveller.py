@@ -13,7 +13,7 @@ def south():
 def checkPos():
     if position == 1.1 or position == 2.1:
         north = True
-        east, south, west = False
+        (east, south, west) = (False, False, False)
     elif position == 1.2:
         north, east, south = True
         west = False
@@ -39,15 +39,17 @@ victory = False
 position = 1.1
 
 print("You can travel:(N)orth.")
-choice = input("Direction:")
+choice = input("Direction:").capitalize
 while victory != True:
-    checkPos():
-    if choice "n" or "N" & north:
-        north():
-    elif e:
-        pass
+    checkPos()
+    if choice == "N" & north == True:
+        north()
+    elif choice == "N" & north == False:
         print("Not a valid direction!")
-    elif choice == 
+    elif choice == "E" & east == True:
+        east()
+    elif choice == "E" & east == False:
+        print("Not a valid direction!")
 
 
 
