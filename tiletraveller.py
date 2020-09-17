@@ -18,11 +18,17 @@ def checkPos():
         north, east, south = True
         west = False
     elif position == 1.3:
-        east, south = True
-        north, west = False
+        (east, south) = (True, True)
+        (north, west) = (False, False)
     elif position == 2.2 or position == 3.3:
-        south, west = True
-        north, east = False
+        (south, west) = (True, True)
+        (north, east) = (False, False)
+    elif position == 2.3:
+        (east, west) = (True, True)
+        (north, south) = (False, False)
+    elif position == 3.2:
+        (north, south) = (True, True)
+        (east, west) = (False, False)
     
 
 
