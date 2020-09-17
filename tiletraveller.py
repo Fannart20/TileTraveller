@@ -21,17 +21,11 @@ def checkPos():
         north, east, south = True
         west = False
     elif position == 1.3:
-        (east, south) = (True, True)
-        (north, west) = (False, False)
+        east, south = True
+        north, west = False
     elif position == 2.2 or position == 3.3:
-        (south, west) = (True, True)
-        (north, east) = (False, False)
-    elif position == 2.3:
-        (east, west) = (True, True)
-        (north, south) = (False, False)
-    elif position == 3.2:
-        (north, south) = (True, True)
-        (east, west) = (False, False)
+        south, west = True
+        north, east = False
     
 
 
@@ -54,14 +48,16 @@ while victory != True:
     if position == 3.1:
         print("Victory!")
         victory = True
-    if choice == "N" & north == True:
-        north()
-    elif choice == "N" & north == False:
-        invalid()
-    elif choice == "E" & east == True:
-        east()
-    elif choice == "E" & east == False:
-        invalid()
+    if choice == "N":
+        if north == True:
+            north()
+        else:
+            invalid()
+    elif choice == "E":
+        if east == True:
+            east()
+        else:
+            invalid()
     elif choice == "W":
         if west == True:
             west()
