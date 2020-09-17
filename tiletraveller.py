@@ -1,13 +1,13 @@
-def north ():
+def north():
     position += 0.1
 
-def west ():
+def west():
     position -= 1
 
-def east ():
+def east():
     position += 1
 
-def south ():
+def south():
     position -= 0.1
 
 def checkPos():
@@ -41,7 +41,11 @@ position = 1.1
 print("You can travel:(N)orth.")
 choice = input("Direction:")
 while victory != True:
-    if choice != "n" or "N":
+    checkPos():
+    if choice "n" or "N" & north:
+        north():
+    elif e:
+        pass
         print("Not a valid direction!")
     elif choice == 
 
